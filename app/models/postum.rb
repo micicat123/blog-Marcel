@@ -1,0 +1,2 @@
+class Postum < ApplicationRecord
+end

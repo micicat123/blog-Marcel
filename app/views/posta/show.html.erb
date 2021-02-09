@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @postum.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @postum.body %>
+</p>
+
+<%= link_to 'Edit', edit_postum_path(@postum) %> |
+<%= link_to 'Back', posta_path %>
