@@ -1,1 +1,1 @@
-json.array! @posta, partial: "posta/postum", as: :postum
+json.array! @posta, partial: "posta/post", as: :post
