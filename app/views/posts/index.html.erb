@@ -16,7 +16,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
-        <td><%= post.user.email %></td>
+        <td><%= post.user.name || 'Ni imena' %></td>
         <%= display_posts_link(post) %>
       </tr>
     <% end %>

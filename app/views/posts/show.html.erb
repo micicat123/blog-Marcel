@@ -11,7 +11,7 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @post.user.email %>
+  <%= @post.user.name || 'Ni imena' %>
 </p>
 
 <%= display_post_show_links(@post) %>
