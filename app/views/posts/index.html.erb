@@ -1,27 +1,23 @@
 
 <h1>Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Author</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= post.user.name || 'Ni imena' %></td>
-        <%= display_posts_link(post) %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="row mb-2">
+      <% @posts.each do |post| %>
+          <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+              <div class="card-body d-flex flex-column align-items-start">
+                <strong class="d-inline-block mb-2"><%= post.user.name || 'Ni imena' %></strong>
+                <h3 class="mb-0">
+                  <a class="text-dark" href="#"><%= post.title %></a>
+                </h3>
+                <div class="mb-1 text-muted"><%= time_ago_in_words(post.created_at)  %></div>
+                <p class="card-text mb-auto"><%= post.body.truncate(27, separator: ' ') %></p>
+                <%= display_posts_link(post) %>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
 
 <br>
 
